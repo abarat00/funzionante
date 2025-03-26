@@ -325,7 +325,7 @@ class PortfolioEnvironment:
                         self.prices[self.tickers.index(ticker)] = row["close"]
                         self.price_history[ticker].append(row["close"])
 
-                    print(f"Ticker: {ticker}, Price: {self.prices[self.tickers.index(ticker)]}, Date: {row.get('date', 'N/A')}")
+                    #print(f"Ticker: {ticker}, Price: {self.prices[self.tickers.index(ticker)]}, Date: {row.get('date', 'N/A')}")
 
     
     def reset(self, random_state=None, noise_seed=None, start_index=None):
@@ -756,7 +756,7 @@ class PortfolioEnvironment:
             percent_return = (portfolio_value - portfolio_value_prev) / portfolio_value_prev
             percent_return = np.clip(percent_return, -0.05, 0.05)
 
-        print(f"Step {self.current_index}: Portfolio value: ${portfolio_value:.2f}, Previous: ${portfolio_value_prev:.2f}, Percent return: {percent_return:.6f}")
+        #print(f"Step {self.current_index}: Portfolio value: ${portfolio_value:.2f}, Previous: ${portfolio_value_prev:.2f}, Percent return: {percent_return:.6f}")
 
         # COMPONENTI DEL REWARD
 

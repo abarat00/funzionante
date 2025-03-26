@@ -1244,11 +1244,11 @@ def main(args):
                         actions = agent.act(state, noise=False)
                     
                     # Log prima dell'azione
-                    if step_counter % 20 == 0 or np.any(np.abs(actions) > 0.1):  # Log ogni 20 step o per azioni significative
-                        print(f"\nStep {step_counter}:")
-                        print(f"Posizioni correnti: {test_env.positions}")
-                        print(f"Azioni: {actions}")
-                        print(f"Portfolio value: ${test_env.get_portfolio_value():.2f}")
+                    #if step_counter % 20 == 0 or np.any(np.abs(actions) > 0.1):  # Log ogni 20 step o per azioni significative
+                        #print(f"\nStep {step_counter}:")
+                        #print(f"Posizioni correnti: {test_env.positions}")
+                        #print(f"Azioni: {actions}")
+                        #print(f"Portfolio value: ${test_env.get_portfolio_value():.2f}")
                     
                     reward = test_env.step(actions)
                     state = test_env.get_state()
